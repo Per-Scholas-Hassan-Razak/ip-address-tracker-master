@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>IP Address Tracker</h1>
+      <form id="ip-address-input-form">
+        <input
+          type="text"
+          id="ip-address-input"
+          placeholder="Search for any IP address or domain"
+          aria-label="IP address or domain"
+        />
+        <button type="submit" id="ip-search-button">
+          <img id="arrow-icon" src="images/icon-arrow.svg" alt="arrow icon" />
+        </button>
+      </form>
+    </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+    <section class="location">
+      <div class="loc-details">
+        <h2>IP Address</h2>
+        <p id="ip-address">Loading...</p>
+      </div>
+      <div class="loc-details">
+        <h2>Location</h2>
+        <p id="location">Loading...</p>
+      </div>
+      <div class="loc-details">
+        <h2>Timezone</h2>
+        <p id="timezone">Loading...</p>
+      </div>
+      <div class="loc-details">
+        <h2>ISP</h2>
+        <p id="isp">Loading...</p>
+      </div>
+    </section>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div id="map" class="map-container"></div>
+  </body>
 </html>
