@@ -12,7 +12,7 @@ export class GeolocationAPI {
   location: Location;
   domains?: string[];
 
-  constructor({ ip, isp, location}: GeolocationAPIProps) {
+  constructor({ ip, isp, location }: GeolocationAPIProps) {
     this.ip = ip;
     this.isp = isp;
     this.location = new Location(location);
@@ -22,8 +22,7 @@ export class GeolocationAPI {
     return this.location.completeAddress;
   }
 
-
-  get coordinates(): { latitude: number; longitude: number } {
+  get coordinates(): { lat: number; lng: number } {
     return this.location.coordinates;
   }
 

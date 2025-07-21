@@ -4,8 +4,8 @@ export interface LocationProps {
   postalCode: string;
   country: string;
   timezone: string;
-  latitude: number;
-  longitude: number;
+  lat: number;
+  lng: number;
 }
 
 export class Location {
@@ -14,8 +14,8 @@ export class Location {
   postalCode: string;
   country: string;
   timezone: string;
-  latitude: number;
-  longitude: number;
+  lat: number;
+  lng: number;
 
   constructor(props: LocationProps) {
     this.city = props.city;
@@ -23,15 +23,15 @@ export class Location {
     this.postalCode = props.postalCode;
     this.country = props.country;
     this.timezone = props.timezone;
-    this.latitude = props.latitude;
-    this.longitude = props.longitude;
+    this.lat = Number(props.lat);
+    this.lng = Number(props.lng);
   }
 
   get completeAddress(): string {
     return `${this.city}, ${this.region} ${this.postalCode}`;
   }
 
-  get coordinates(): { latitude: number; longitude: number } {
-    return { latitude: this.latitude, longitude: this.longitude };
+  get coordinates(): { lat: number; lng: number } {
+    return { lat: this.lat, lng: this.lng };
   }
 }

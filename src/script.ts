@@ -1,6 +1,7 @@
 import { fetchIpGeolocationData } from "./services/geoLocationApiService.js";
 import { Location } from "./model/Location.js";
 import { GeolocationAPI } from "./model/GeolocationAPI.js";
+import { renderMap } from "./services/leafletMapService.js";
 
 let locationData: Location | null = null;
 let geoLocationData : GeolocationAPI | null = null;
@@ -20,9 +21,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("Geolocation data:", rawData);
     console.log(rawData.location.city, rawData.ip, rawData.isp);
     geoLocationData = new GeolocationAPI(rawData);
+    console.log("geolocation data : ", geoLocationData)
+
     locationData = geoLocationData.location
+    console.log("location data : ", locationData)
     renderLocationUI();
+    renderMap(locationData)
   } catch (err) {
     console.error("Error fetching IP data:", err);
   }
 });
+
+
+

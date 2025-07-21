@@ -8,7 +8,8 @@
     "strict": true,                           // Enable all strict type-checking options
     "esModuleInterop": true,                  // Allow default imports from CommonJS modules
     "forceConsistentCasingInFileNames": true, // Avoid case-related bugs across OSes
-    "skipLibCheck": true                      // Faster builds, skip type checks in node_modules
+    "skipLibCheck": true,                      // Faster builds, skip type checks in node_modules
+    "types": ["leaflet"],                      
   },
   "include": ["src"],                         // Only compile files in /src
   "exclude": ["node_modules", "dist"]         // Avoid unnecessary processing
