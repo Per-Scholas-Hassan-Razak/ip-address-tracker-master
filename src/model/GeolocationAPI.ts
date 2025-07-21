@@ -1,4 +1,4 @@
-import { Location, LocationProps } from "./Location";
+import { Location, LocationProps } from "./Location.js";
 
 export interface GeolocationAPIProps {
   ip: string;
