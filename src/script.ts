@@ -19,7 +19,7 @@ input.addEventListener("input", () => {
     spanError!.classList.add("hidden");
     input.classList.remove("input-error");
   } else {
-    spanError!.textContent = "Invalid IP address format (e.g., 11.111.111.22)";
+    spanError!.textContent = "Invalid IP address format (e.g.123.45.67.89)";
     spanError!.classList.remove("hidden");
     input.classList.add("input-error");
   }

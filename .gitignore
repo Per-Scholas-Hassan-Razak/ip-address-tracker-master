@@ -23,7 +23,7 @@ npm-debug.log*
 
 # Production
 /build
-/dist
+# /dist
 /.next
 /out
 
@@ -41,4 +41,3 @@ Thumbs.db
 
 preview.jpg
 style-guide.md
-README.md
