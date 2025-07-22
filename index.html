@@ -16,43 +16,50 @@
   </head>
   <body>
     <div class="main-container">
-    <header class="header">
-      <h1>IP Address Tracker</h1>
-      <form id="ip-address-input-form">
-        <input
-          type="text"
-          id="ip-address-input"
-          placeholder="Search for any IP address or domain"
-          aria-label="IP address or domain"
-        />
-        <button type="submit" id="ip-search-button">
-          <img id="arrow-icon" src="images/icon-arrow.svg" alt="arrow icon" />
-        </button>
-      </form>
-    </header>
+      <header class="header">
+        <h1>IP Address Tracker</h1>
+        <div class="form-wrapper">
+          <form id="ip-address-input-form">
+            <div id="ip-validation-error" class="error-banner hidden"></div>
+            <input
+              type="text"
+              id="ip-address-input"
+              placeholder="Search for any IP address or domain"
+              aria-label="IP address or domain"
+            />
 
-    <section class="location">
-      <div class="loc-details">
-        <h2>IP Address</h2>
-        <p id="ip-address"></p>
-      </div>
-      <div class="loc-details">
-        <h2>Location</h2>
-        <p id="location"></p>
-      </div>
-      <div class="loc-details">
-        <h2>Timezone</h2>
-        <p id="timezone"></p>
-      </div>
-      <div class="loc-details">
-        <h2>ISP</h2>
-        <p id="isp"></p>
-      </div>
-    </section>
-    <div id="map" class="map-container"></div>
-</div>
+            <button type="submit" id="ip-search-button">
+              <img
+                id="arrow-icon"
+                src="images/icon-arrow.svg"
+                alt="arrow icon"
+              />
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <section class="location">
+        <div class="loc-details">
+          <h2>IP Address</h2>
+          <p id="ip-address"></p>
+        </div>
+        <div class="loc-details">
+          <h2>Location</h2>
+          <p id="location"></p>
+        </div>
+        <div class="loc-details">
+          <h2>Timezone</h2>
+          <p id="timezone"></p>
+        </div>
+        <div class="loc-details">
+          <h2>ISP</h2>
+          <p id="isp"></p>
+        </div>
+      </section>
+      <div id="map" class="map-container"></div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="dist/script.js"></script>
-
   </body>
 </html>
